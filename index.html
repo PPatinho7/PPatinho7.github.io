@@ -158,7 +158,6 @@ font-size: 1vh;
 </style>
 <body onload="clique()">
 
-<?php if ($s=="") {$s="ma";} ?>
     <div class="content">
 
         <div class="item article-1"><div align="center">
@@ -214,7 +213,7 @@ function openCity(cityName) {
 		
 function clique() {
 var pagebutton= document.getElementById("ma");
-pagebutton.click();
+pagebutton.focus();
 }		
 		
 </script>
