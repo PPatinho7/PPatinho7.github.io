@@ -156,7 +156,7 @@ font-size: 1vh;
 }
 
 </style>
-<body>
+<body onload="clique()">
 
 <?php if ($s=="") {$s="ma";} ?>
     <div class="content">
@@ -212,7 +212,7 @@ function openCity(cityName) {
   document.getElementById(cityName).style.display = "block";  
 }
 		
-function () {
+function clique() {
     $('#ma').click();
 }		
 		
