@@ -1,0 +1,216 @@
+
+<html>
+<style>
+
+body {
+  background-color: #ffffff;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.panel-2 {
+    background-color: #ffffff;
+    text-align: center;
+    height:50%;
+    position:absolute;
+    bottom:0;
+width: 100%;
+}
+
+.article-1 {
+    background-color: #ffffff;
+    height:50%;
+     position:absolute;
+    top:0;
+    left:0px;
+    width: 100%
+    
+}
+
+
+
+@media screen and (min-width:990px) {
+    .content {
+        align-items: left;
+    }
+    .item{
+       width: 50%
+    }
+    /*.article-1, .article-2, .article-3, .article-4, .article-5 {
+        width: 400px;
+    }*/
+
+    .panel-2 {
+        align-self: flex-end;
+        order: -1;
+        position: absolute;
+        height:100%;
+        right: 0px;
+        top: 0px;
+    }
+    .article-1 {
+      align-self: flex-end;
+     position: absolute;
+     order: 0;
+        height:100%;
+        left: 0px;
+        top: 0px;
+        /*order: -2;*/
+    }
+}
+
+a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #eb768c;
+  text-decoration: none;
+}
+a:active {
+  color: #eb768c;
+  text-decoration: none;
+}
+
+
+.test {
+width:100%;
+height: 100%;
+background : center/ contain no-repeat url("bg.png");
+}
+
+@font-face {
+    font-family: mainfont;
+    font-weight: bold;
+    src: url("font.otf") format("opentype");
+}
+
+@font-face {
+    font-family: titre;
+    font-weight: bold;
+    src: url("titre.otf") format("opentype");
+}
+
+@font-face {
+    font-family: cats;
+    font-weight: bold;
+    src: url("cats.ttf") format("opentype");
+}
+
+.cats {
+font-size: 2vh;
+font-family:'cats';
+}
+
+.menu {
+font-size: 2vh;
+font-family:'mainfont';
+text-decoration: ;
+}
+
+.titre {
+font-size: 5.5vh;
+font-family:'titre';
+ 
+}
+
+.main {
+font-size: 2vh;
+font-family:'mainfont';
+}
+
+.separ {
+font-size: 1vh;
+}
+
+.bouton {
+  background-color: #ffffff;
+  border: none;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:'mainfont';
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.bouton:focus {
+  color: #eb768c;
+}
+
+.bouton:hover {
+  color: #eb768c;
+}
+
+</style>
+<body>
+
+<?php if ($s=="") {$s="ma";} ?>
+    <div class="content">
+
+        <div class="item article-1"><div align="center">
+		
+		<table border="0" class="">
+<tr><td> 
+
+<div align="center" class="titre"><br> MARIAGE DE <br>LAURE-ANNE & PATRICK </div> 
+
+<div align="center" class="separ">_________________________________________________________________________________________________________</div>
+<div align="center"><br>
+  <button class="bouton" onclick="openCity('London')"><font class="cats">x</font><font color="#eb768c">MAIRIE</font><font class="cats">x</font></button>
+  <button class="bouton" onclick="openCity('Paris')"><font class="cats">x</font><font color="#eb768c">BRUNCH</font><font class="cats">x</font></button>
+  <button class="bouton" onclick="openCity('Tokyo')"><font class="cats">x</font><font color="#eb768c">INFOS</font><font class="cats">x</font></button>
+</div>
+<div align="center" class="separ">_________________________________________________________________________________________________________</div>
+<div id="London" class="w3-container city" align="center" >
+  <div class="main"><br><br> On te donne rendez vous <br><br> le samedi 1er juillet &agrave; 11h30 <br><br> &agrave; la <a href="https://www.google.com/maps/place/Mairie+du+20%E1%B5%89+arrondissement/@48.8650889,2.3978761,18z/data=!4m6!3m5!1s0x47e66d90365fcb6d:0x3bfd0710f96d821e!8m2!3d48.8651136!4d2.3990885!16s%2Fg%2F11h40zqz9c?coh=164777&entry=tt" target="blank"><font color="#eb768c"><u>Mairie du 20eme.</u></font></a><br><br></div>
+</div>
+
+<div id="Paris" class="w3-container city" align="center" style="display:none">
+  <div align="center" class="main"><br>Rejoins nous ensuite pour un brunch<br><br>  dans <a href="https://www.google.com/maps/search/48.867563,+2.406492" target="blank"><font color="#eb768c"><u>un jardin &agrave c&ocirc;t&eacute;.</u></font></a> <br><br>Ambiance pique-nique d&eacute;contract&eacute;!<br><br>Am&egrave;ne &agrave boire, &agrave manger :<br><br> ce que tu as envie de partager.</div>
+</div>
+
+<div id="Tokyo" class="w3-container city" align="left" style="display:none">
+  <div align="left" class="main"><br>&ensp;&ensp;-On pr&eacute;voit une nappe pour poser tes fesses.<br><br>&ensp;&ensp;-Sur place un espace de jeu pour les petits.<br><br>&ensp;&ensp;-Pense &agrave; ta cr&egrave;me solaire et ton bob.<br><br>&ensp;&ensp;-Ne nourris pas les lapins d&eacute;j&agrave; en surpoids.<br><br>&ensp;&ensp;-Contactes nous si tu as des questions.</div>
+</div>
+
+ 
+
+
+</div></tr></td>
+</table></div></div>
+       
+        <div class="item panel-2">
+<table border="0" class="test">
+<tr><td> </tr></td>
+</table>  </div>
+        
+        
+    </div>
+	
+	<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+</body>
+</html>
