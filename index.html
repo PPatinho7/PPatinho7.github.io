@@ -156,7 +156,7 @@ font-size: 1vh;
 }
 
 </style>
-<body onload="clique()">
+<body>
 
     <div class="content">
 
@@ -169,9 +169,11 @@ font-size: 1vh;
 
 <div align="center" class="separ">_________________________________________________________________________________________________________</div>
 <div align="center"><br>
-  <button id="ma" class="bouton" onclick="openCity('London')"><font class="cats">x</font><font color="#eb768c">MAIRIE</font><font class="cats">x</font></button>
-  <button class="bouton" onclick="openCity('Paris')"><font class="cats">x</font><font color="#eb768c">BRUNCH</font><font class="cats">x</font></button>
-  <button class="bouton" onclick="openCity('Tokyo')"><font class="cats">x</font><font color="#eb768c">INFOS</font><font class="cats">x</font></button>
+  <button class="bouton" onclick="openCity('London')"><font class="cats">x&ensp;</font><font color="#eb768c">MAIRIE</font><font class="cats">&ensp;x</font></button>
+&ensp;&ensp;
+  <button class="bouton" onclick="openCity('Paris')"><font class="cats">x&ensp;</font><font color="#eb768c">BRUNCH</font><font class="cats">&ensp;x</font></button>
+&ensp;&ensp;
+  <button class="bouton" onclick="openCity('Tokyo')"><font class="cats">x&ensp;</font><font color="#eb768c">INFOS</font><font class="cats">&ensp;x</font></button>
 </div>
 <div align="center" class="separ">_________________________________________________________________________________________________________</div>
 <div id="London" class="w3-container city" align="center" >
@@ -210,11 +212,7 @@ function openCity(cityName) {
   }
   document.getElementById(cityName).style.display = "block";  
 }
-		
-function clique() {
-var pagebutton= document.getElementById("ma");
-pagebutton.hover();
-}		
+			
 		
 </script>
 
