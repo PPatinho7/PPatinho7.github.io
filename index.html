@@ -170,7 +170,7 @@ font-size: 1vh;
 
 <div align="center" class="separ">_________________________________________________________________________________________________________</div>
 <div align="center"><br>
-  <button class="bouton" onclick="openCity('London')"><font class="cats">x</font><font color="#eb768c">MAIRIE</font><font class="cats">x</font></button>
+  <button id="ma" class="bouton" onclick="openCity('London')"><font class="cats">x</font><font color="#eb768c">MAIRIE</font><font class="cats">x</font></button>
   <button class="bouton" onclick="openCity('Paris')"><font class="cats">x</font><font color="#eb768c">BRUNCH</font><font class="cats">x</font></button>
   <button class="bouton" onclick="openCity('Tokyo')"><font class="cats">x</font><font color="#eb768c">INFOS</font><font class="cats">x</font></button>
 </div>
@@ -202,6 +202,7 @@ font-size: 1vh;
     </div>
 	
 	<script>
+		
 function openCity(cityName) {
   var i;
   var x = document.getElementsByClassName("city");
@@ -210,6 +211,11 @@ function openCity(cityName) {
   }
   document.getElementById(cityName).style.display = "block";  
 }
+		
+function () {
+    $('#ma').click();
+}		
+		
 </script>
 
 </body>
