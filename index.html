@@ -110,6 +110,7 @@ background : center/ contain no-repeat url("bg.png");
 .cats {
 font-size: 2vh;
 font-family:'cats';
+color:white;
 }
 
 .menu {
@@ -134,9 +135,9 @@ font-size: 1vh;
 }
 
 .bouton {
-  background-color: #ffffff;
+  background-color: white;
   border: none;
-  color: white;
+  color: #000000;
   padding: 0px 0px;
   text-align: center;
   text-decoration: none;
@@ -147,16 +148,17 @@ font-size: 1vh;
   cursor: pointer;
 }
 
-.bouton:focus {
-  color: #eb768c;
-}
+.bouton:focus .cats {color: #eb768c;}
+.bouton:focus { color: #eb768c; }
 
-.bouton:hover {
-  color: #eb768c;
-}
+.bouton:hover .cats {color: #eb768c;}
+.bouton:hover { color: #eb768c; }
+
+.bouton:visited .cats {color: #eb768c;}
+.bouton:visited { color: #eb768c; }
 
 </style>
-<body>
+<body onload="openCity('London')">
 
     <div class="content">
 
@@ -169,11 +171,11 @@ font-size: 1vh;
 
 <div align="center" class="separ">_________________________________________________________________________________________________________</div>
 <div align="center"><br>
-  <button class="bouton" onclick="openCity('London')"><font class="cats">x&ensp;</font><font color="#eb768c">MAIRIE</font><font class="cats">&ensp;x</font></button>
+  <button id="mairie" class="bouton" onclick="openCity('London')"><font class="cats">x</a>&ensp;</font>MAIRIE<font class="cats">&ensp;x</font></button>
 &ensp;&ensp;
-  <button class="bouton" onclick="openCity('Paris')"><font class="cats">x&ensp;</font><font color="#eb768c">BRUNCH</font><font class="cats">&ensp;x</font></button>
+  <button id="brunch" class="bouton" onclick="openCity('Paris')"><font class="cats">x&ensp;</font>BRUNCH<font class="cats">&ensp;x</font></button>
 &ensp;&ensp;
-  <button class="bouton" onclick="openCity('Tokyo')"><font class="cats">x&ensp;</font><font color="#eb768c">INFOS</font><font class="cats">&ensp;x</font></button>
+  <button id="infos" class="bouton" onclick="openCity('Tokyo')"><font class="cats">x&ensp;</font>INFOS<font class="cats">&ensp;x</font></button>
 </div>
 <div align="center" class="separ">_________________________________________________________________________________________________________</div>
 <div id="London" class="w3-container city" align="center" >
@@ -205,14 +207,18 @@ font-size: 1vh;
 	<script>
 		
 function openCity(cityName) {
+if (cityName=='London') {var foc = "mairie";} 
+if (cityName=='Paris') {var foc = "brunch";} 
+if (cityName=='Tokyo') {var foc = "infos";} 
   var i;
   var x = document.getElementsByClassName("city");
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
   document.getElementById(cityName).style.display = "block";  
+  document.getElementById(foc).focus();
 }
-			
+
 		
 </script>
 
