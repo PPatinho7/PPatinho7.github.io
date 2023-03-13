@@ -1,4 +1,5 @@
 
+
 <html>
 <style>
 
@@ -128,6 +129,7 @@ font-family:'titre';
 .main {
 font-size: 2vh;
 font-family:'mainfont';
+
 }
 
 .separ {
@@ -146,6 +148,7 @@ font-size: 1vh;
   font-size: 2vh;
   margin: 4px 2px;
   cursor: pointer;
+  
 }
 
 
@@ -158,10 +161,16 @@ font-size: 1vh;
 .bouton:visited .cats {color: #eb768c;}
 .bouton:visited { color: #eb768c; }
 
+.active .cats {color: #eb768c;} 
+.active {color: #eb768c;  }
+
+
+
+
 </style>
 
 <head><title>Mariage de Laure-Anne & Patrick</title></head>
-<body onload="openCity('London')">
+<body onload="openCity('Tokyo');openCity('Paris');openCity('London');">
 
     <div class="content">
 
@@ -174,7 +183,7 @@ font-size: 1vh;
 
 <div align="center" class="separ">_________________________________________________________________________________________________________</div>
 <div align="center"><br>
-  <button id="mairie" class="bouton" onclick="openCity('London')"><font class="cats">x</a>&ensp;</font>MAIRIE<font class="cats">&ensp;x</font></button>
+  <button id="mairie" class="bouton" onclick="openCity('London')"><font class="cats">x&ensp;</font>MAIRIE<font class="cats">&ensp;x</font></button>
 &ensp;&ensp;
   <button id="brunch" class="bouton" onclick="openCity('Paris')"><font class="cats">x&ensp;</font>BRUNCH<font class="cats">&ensp;x</font></button>
 &ensp;&ensp;
@@ -210,16 +219,40 @@ font-size: 1vh;
 	<script>
 		
 function openCity(cityName) {
-if (cityName=='London') {var foc = "mairie";} 
-if (cityName=='Paris') {var foc = "brunch";} 
-if (cityName=='Tokyo') {var foc = "infos";} 
+if (cityName=='London') {
+document.getElementById("mairie").classList.add("active");
+document.getElementById("brunch").classList.remove("active");
+document.getElementById("infos").classList.remove("active");} 
+if (cityName=='Paris') {
+document.getElementById("mairie").classList.remove("active");
+document.getElementById("brunch").classList.add("active");
+document.getElementById("infos").classList.remove("active");} 
+if (cityName=='Tokyo') {
+document.getElementById("mairie").classList.remove("active");
+document.getElementById("brunch").classList.remove("active");
+document.getElementById("infos").classList.add("active");} 
+ 
   var i;
   var x = document.getElementsByClassName("city");
   for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
+
+
+
+x[i].style.transition = "opacity 0.3s ease-out";
+x[i].style.opacity = "0";
+x[i].style.height = "0";
+x[i].style.overflow = "hidden";
+//x[i].style.display = "none";
   }
-  document.getElementById(cityName).style.display = "block";  
-  document.getElementById(foc).focus();
+  document.getElementById(cityName).style.opacity = "1";
+  document.getElementById(cityName).style.height = "auto";
+  document.getElementById(cityName).style.transition = "opacity 0.3s ease-out";
+ 
+ document.getElementById(cityName).style.display = "block";
+
+    
+  
+  
 }
 
 		
