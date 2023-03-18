@@ -10,66 +10,49 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
+
 body {
-  background-color: #ffffff;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-
-
-.panel-2 {
-    background-color: #ffffff;
-    text-align: left;
-	margin-left:0;
-	margin-bottom:0;
-    height:49%;
-    position:absolute;
-    bottom:0;
-width: 97%;
-}
-
-.article-1 {
-    background-color: #ffffff;
-    height:50%;
-     position:absolute;
-    top:0;
-    left:0px;
-    width: 100%
-    
-}
-
-
-@media (orientation: landscape) {
-
-    .content {
-        align-items: left;
-    }
-    .item{
-       width: 50%
-    }
-
-    .panel-2 {
-        align-self: flex-end;
-        order: -1;
-        position: absolute;
-        height:100%;
-        right: 0px;
-        bottom: 0px;
-    }
-    .article-1 {
-      align-self: flex-end;
-     position: absolute;
-     order: 0;
-        height:100%;
-        left: 0px;
-        top: 0px;
-        /*order: -2;*/
-    }
-}
+			margin: 0;
+			padding: 0;
+			background-color: #ffffff;
+		}
+		.container {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			
+			justify-content: center;
+		}
+		.block1 {
+			background-color: #ffffff;
+			height: 50vh;
+			width: 100%;
+			display: flex;
+			
+			justify-content: center;
+		}
+		.block2 {
+			background-color: #ffffff;
+			height: 50vh;
+			width: 100%;
+			display: flex;
+			
+			justify-content: center;
+		}
+		@media screen and (orientation: landscape) {
+			.container {
+				flex-direction: row;
+			}
+			.block1 {
+				height: 100%;
+				width: 50vw;
+				align-items: center;
+			}
+			.block2 {
+				height: 100%;
+				width: 50vw;
+			}
+		}
 a:link {
   color: #ffffff;
   text-decoration: none;
@@ -179,9 +162,9 @@ font-size: 1vh;
 <head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mariage de Laure-Anne & Patrick</title></head>
 <body onload="openCity('Tokyo');openCity('Paris');openCity('London');">
 
-    <div class="content">
+    <div class="container">
 
-        <div class="item article-1"><div align="center">
+        <div class="block1"><div align="center">
 		
 		<table border="0" class="">
 <tr><td> 
@@ -221,7 +204,7 @@ font-size: 1vh;
 </div></tr></td>
 </table></div></div>
        
-        <div class="item panel-2">
+        <div class="block2">
 <table border="0" class="test">
 <tr><td> </tr></td>
 </table>  </div>
