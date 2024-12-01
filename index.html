@@ -1,0 +1,271 @@
+
+<html>
+<style>
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+body {
+			margin: 0;
+			padding: 0;
+			background-color: #ffffff;
+		}
+		.container {
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			
+			justify-content: center;
+		}
+		.block1 {
+			background-color: #ffffff;
+			height: 50vh;
+			width: 100%;
+			display: flex;
+			
+			justify-content: center;
+		}
+		.block2 {
+			background-color: #ffffff;
+			height: 50vh;
+			width: 100%;
+			display: flex;
+			
+			justify-content: center;
+		}
+		@media screen and (orientation: landscape) {
+			.container {
+				flex-direction: row;
+			}
+			.block1 {
+				height: 100%;
+				width: 50vw;
+				align-items: center;
+			}
+			.block2 {
+				height: 100%;
+				width: 50vw;
+			}
+		}
+a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #eb768c;
+  text-decoration: none;
+}
+a:active {
+  color: #eb768c;
+  text-decoration: none;
+}
+
+
+.test {
+width:100%;
+height: 100%;
+margin:0;
+padding:0;
+background : center/ contain no-repeat url("bg.png");
+}
+
+@font-face {
+    font-family: mainfont;
+    font-weight: bold;
+    src: url("font.otf") format("opentype");
+}
+
+@font-face {
+    font-family: titre;
+    font-weight: bold;
+    src: url("titre.otf") format("opentype");
+}
+
+@font-face {
+    font-family: cats;
+    font-weight: bold;
+    src: url("cats.ttf") format("opentype");
+}
+
+.cats {
+font-size: 2vh;
+font-family:'cats';
+color:white;
+}
+
+.menu {
+font-size: 2vh;
+font-family:'mainfont';
+text-decoration: ;
+}
+
+.titre {
+font-size: 5.5vh;
+font-family:'titre';
+ 
+}
+
+.main {
+font-size: 2vh;
+font-family:'mainfont';
+
+}
+
+.separ {
+font-size: 1vh;
+}
+
+.bouton {
+  background-color: white;
+  border: none;
+  color: #000000;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family:'mainfont';
+  font-size: 2vh;
+  margin: 4px 2px;
+  cursor: pointer;
+  
+}
+
+
+.bouton:focus .cats {color: #eb768c;}
+.bouton:focus { color: #eb768c; }
+
+.bouton:hover .cats {color: #eb768c;}
+.bouton:hover { color: #eb768c; }
+
+.bouton:visited .cats {color: #eb768c;}
+.bouton:visited { color: #eb768c; }
+
+.active .cats {color: #eb768c;} 
+.active {color: #eb768c;  }
+
+
+
+
+</style>
+
+<head><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mariage de Laure-Anne & Patrick</title></head>
+<body onload="openCity('Tokyo');openCity('Paris');openCity('London');">
+
+    <div class="container">
+
+        <div class="block1"><div align="center">
+		
+		<table border="0" class="">
+<tr><td> 
+
+<div align="center" class="titre"><div align="center" class="separ"><br></div> MARIAGE DE <br>LAURE-ANNE & PATRICK </div> 
+
+<div align="center" class="separ">_________________________________________________________________________________________________________</div>
+<div align="center" class="separ"><br>
+  <button id="mairie" class="bouton" onclick="openCity('London')"><font class="cats">x&ensp;</font>MAIRIE<font class="cats">&ensp;x</font></button>
+&ensp;&ensp;
+  <button id="brunch" class="bouton" onclick="openCity('Paris')"><font class="cats">x&ensp;</font>BRUNCH<font class="cats">&ensp;x</font></button>
+&ensp;&ensp;
+  <button id="infos" class="bouton" onclick="openCity('Tokyo')"><font class="cats">x&ensp;</font>INFOS<font class="cats">&ensp;x</font></button>
+</div>
+<div align="center" class="separ">_________________________________________________________________________________________________________</div>
+<div id="London" class="w3-container city" align="center" >
+  <div class="main">
+<br>On te donne rendez vous vers 11h15,<br><br>  
+Samedi 1er juillet, &agrave; la <a href="https://www.google.com/maps/place/Mairie+du+20%E1%B5%89+arrondissement/@48.8650889,2.3978761,18z/data=!4m6!3m5!1s0x47e66d90365fcb6d:0x3bfd0710f96d821e!8m2!3d48.8651136!4d2.3990885!16s%2Fg%2F11h40zqz9c?coh=164777&entry=tt" target="blank"><font color="#eb768c"><u>Mairie du 20eme.</u></font></a> <br><br>
+Suivie d'un Pique-Nique participatif <br> <br> dans <a href="https://www.google.com/maps/search/48.867563,+2.406492" target="blank"><font color="#eb768c"><u>un jardin &agrave c&ocirc;t&eacute;.</u></font></a> <br><br>
+<br><br>
+</div>
+</div>
+
+<div id="Paris" class="w3-container city" align="center" style="display:none">
+  <div align="center" class="main">
+<br>Pour l'instant au menu : <br><br>  
+Champagne &bull; Houmous &bull; Carottes <br><br>
+ Jambon Persill&eacute; &bull; Quiches &bull; Un Gateau <br><br>
+Du Fromage &bull; Crepes &bull; Accras
+<br> <br>
+Et toi? N'h&eacute;site pas &agrave; nous dire ce que <br> tu penses amener qu'on le rajoute &agrave; cette liste.
+<br>
+</div>
+</div>
+
+<div id="Tokyo" class="w3-container city" align="left" ; style="display:none">
+  <div align="left" class="main"><br>
+  &ensp;&ensp;<font class="cats"><font color="black">b&ensp;</font></font>Il y aura une nappe pour poser tes fesses.<br><br>
+  &ensp;&ensp;<font class="cats"><font color="black">y&ensp;</font></font>Sur place un espace de jeu pour les petits.<br><br>
+  &ensp;&ensp;<font class="cats"><font color="black">j&ensp;</font></font>Pense &agrave; ta cr&egrave;me solaire et ton bob.<br><br>
+  &ensp;&ensp;<font class="cats"><font color="black">v&ensp;</font></font>Ne nourris pas les lapins d&eacute;j&agrave; en surpoids.<br><br>
+  &ensp;&ensp;<font class="cats"><font color="black">o&ensp;</font></font>Contactes nous si tu as des questions.
+  </div>
+</div>
+
+ 
+
+
+</div></tr></td>
+</table></div></div>
+       
+        <div class="block2">
+<table border="0" class="test">
+<tr><td> </tr></td>
+</table>  </div>
+        
+        
+ 
+	
+	<script>
+		
+function openCity(cityName) {
+if (cityName=='London') {
+document.getElementById("mairie").classList.add("active");
+document.getElementById("brunch").classList.remove("active");
+document.getElementById("infos").classList.remove("active");} 
+if (cityName=='Paris') {
+document.getElementById("mairie").classList.remove("active");
+document.getElementById("brunch").classList.add("active");
+document.getElementById("infos").classList.remove("active");} 
+if (cityName=='Tokyo') {
+document.getElementById("mairie").classList.remove("active");
+document.getElementById("brunch").classList.remove("active");
+document.getElementById("infos").classList.add("active");} 
+ 
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+
+
+
+x[i].style.transition = "opacity 0.3s ease-out";
+x[i].style.opacity = "0";
+x[i].style.height = "0";
+x[i].style.overflow = "hidden";
+//x[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.opacity = "1";
+  document.getElementById(cityName).style.height = "auto";
+  document.getElementById(cityName).style.transition = "opacity 0.3s ease-out";
+ 
+ document.getElementById(cityName).style.display = "block";
+
+    
+  
+  
+}
+
+		
+</script>
+
+</body>
+</html>
